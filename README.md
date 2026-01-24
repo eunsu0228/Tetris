@@ -6,6 +6,12 @@ Python과 Pygame을 사용하여 만든 2인용 대전 테트리스 게임입니
 ![Pygame](https://img.shields.io/badge/Pygame-2.x-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+## 게임 화면
+
+![Dual Tetris 게임 화면](images/2026-01-24-Dual-Tetris-Screen.png)  
+
+*2인 대전 중인 게임 화면*
+
 ## 게임 특징
 
 - **2인 대전 모드**: 한 화면에서 두 명의 플레이어가 동시에 플레이
