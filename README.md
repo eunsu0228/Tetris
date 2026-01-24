@@ -1,6 +1,10 @@
-# 테트리스 2인 대전 게임
+# Dual Tetris (듀얼 테트리스)
 
 Python과 Pygame을 사용하여 만든 2인용 대전 테트리스 게임입니다.
+
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Pygame](https://img.shields.io/badge/Pygame-2.x-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 게임 특징
 
@@ -68,8 +72,8 @@ Python과 Pygame을 사용하여 만든 2인용 대전 테트리스 게임입니
 
 1. 저장소 클론 또는 다운로드
 ```bash
-git clone <repository-url>
-cd Game01
+git clone https://github.com/<username>/Dual_Tetris.git
+cd Dual_Tetris
 ```
 
 2. 가상환경 생성 및 활성화 (선택사항)
