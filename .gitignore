@@ -27,7 +27,7 @@ Thumbs.db
 desktop.ini
 
 # Sphinx documentation
-docs/_build/
+#docs/_build/
 docs/_static/
 docs/_templates/
 
