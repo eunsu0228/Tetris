@@ -1,0 +1,863 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dual Tetris 문서 &mdash; Dual Tetris 1.0.0 문서</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=5a0dd2f0"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/translations.js?v=afa94a99"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="next" title="tetris" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            Dual Tetris
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API 문서:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">tetris</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.Tetromino"><code class="docutils literal notranslate"><span class="pre">Tetromino</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetromino.__init__"><code class="docutils literal notranslate"><span class="pre">Tetromino.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetromino.rotate"><code class="docutils literal notranslate"><span class="pre">Tetromino.rotate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetromino.get_shape"><code class="docutils literal notranslate"><span class="pre">Tetromino.get_shape()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.Tetris"><code class="docutils literal notranslate"><span class="pre">Tetris</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.__init__"><code class="docutils literal notranslate"><span class="pre">Tetris.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.spawn_piece"><code class="docutils literal notranslate"><span class="pre">Tetris.spawn_piece()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.check_collision"><code class="docutils literal notranslate"><span class="pre">Tetris.check_collision()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.merge_piece"><code class="docutils literal notranslate"><span class="pre">Tetris.merge_piece()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.clear_lines"><code class="docutils literal notranslate"><span class="pre">Tetris.clear_lines()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.add_garbage_lines"><code class="docutils literal notranslate"><span class="pre">Tetris.add_garbage_lines()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.move_piece"><code class="docutils literal notranslate"><span class="pre">Tetris.move_piece()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.rotate_piece"><code class="docutils literal notranslate"><span class="pre">Tetris.rotate_piece()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.hard_drop"><code class="docutils literal notranslate"><span class="pre">Tetris.hard_drop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="modules.html#tetris.Tetris.soft_drop"><code class="docutils literal notranslate"><span class="pre">Tetris.soft_drop()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_grid"><code class="docutils literal notranslate"><span class="pre">draw_grid()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_piece"><code class="docutils literal notranslate"><span class="pre">draw_piece()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_board"><code class="docutils literal notranslate"><span class="pre">draw_board()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_player_info"><code class="docutils literal notranslate"><span class="pre">draw_player_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_next_piece"><code class="docutils literal notranslate"><span class="pre">draw_next_piece()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Dual Tetris</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Dual Tetris 문서</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dual-tetris">
+<h1>Dual Tetris 문서<a class="headerlink" href="#dual-tetris" title="Link to this heading"></a></h1>
+<section id="id1">
+<h2>2인용 대전 테트리스 게임<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p><a href="#id2"><span class="problematic" id="id3">**</span></a>Dual Tetris**는 Python과 Pygame을 사용하여 구현한 2인 대전 테트리스 게임입니다.
+한 플레이어가 라인을 제거하면 상대방에게 공격 라인이 추가됩니다.</p>
+</section>
+<section id="id4">
+<h2>주요 기능<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>2인 동시 플레이 모드</p></li>
+<li><p>라인 제거 시 상대방 공격 시스템</p></li>
+<li><p>다음 블록 미리보기</p></li>
+<li><p>점수 및 레벨 시스템</p></li>
+<li><p>7가지 테트로미노 블록</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>조작 방법<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<section id="player-1">
+<h3>Player 1 (좌측)<a class="headerlink" href="#player-1" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>W</strong> - 블록 회전</p></li>
+<li><p><strong>A</strong> - 왼쪽 이동</p></li>
+<li><p><strong>S</strong> - 빠른 낙하 (소프트 드롭)</p></li>
+<li><p><strong>D</strong> - 오른쪽 이동</p></li>
+<li><p><strong>Left Shift</strong> - 즉시 낙하 (하드 드롭)</p></li>
+</ul>
+</section>
+<section id="player-2">
+<h3>Player 2 (우측)<a class="headerlink" href="#player-2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>↑</strong> - 블록 회전</p></li>
+<li><p><strong>←</strong> - 왼쪽 이동</p></li>
+<li><p><strong>↓</strong> - 빠른 낙하 (소프트 드롭)</p></li>
+<li><p><strong>→</strong> - 오른쪽 이동</p></li>
+<li><p><strong>Enter</strong> - 즉시 낙하 (하드 드롭)</p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>공통 키<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>ESC</strong> - 게임 종료</p></li>
+<li><p><strong>R</strong> - 게임 오버 후 재시작</p></li>
+<li><p><strong>Q</strong> - 게임 오버 후 종료</p></li>
+</ul>
+</section>
+</section>
+<section id="id7">
+<h2>게임 규칙<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
+<section id="id8">
+<h3>기본 규칙<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>떨어지는 테트로미노 블록을 회전하고 이동하여 배치</p></li>
+<li><p>가로 한 줄을 완전히 채우면 해당 줄이 제거되고 점수 획득</p></li>
+<li><p>블록이 맨 위까지 쌓이면 게임 오버</p></li>
+</ul>
+</section>
+<section id="id9">
+<h3>대전 규칙<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>2줄 이상을 한 번에 제거하면 상대방에게 공격 라인 전송</p></li>
+<li><p>공격 라인 수 = 제거한 라인 수 - 1</p>
+<ul>
+<li><p>2줄 제거 → 상대방에게 1줄 추가</p></li>
+<li><p>3줄 제거 → 상대방에게 2줄 추가</p></li>
+<li><p>4줄 제거 → 상대방에게 3줄 추가</p></li>
+</ul>
+</li>
+<li><p>공격받은 라인은 회색 블록으로 보드 하단에 추가 (랜덤 위치에 구멍 1개)</p></li>
+<li><p>상대방이 먼저 게임 오버되면 승리</p></li>
+</ul>
+</section>
+<section id="id10">
+<h3>점수 시스템<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>소프트 드롭: 한 칸당 1점</p></li>
+<li><p>하드 드롭: 한 칸당 2점</p></li>
+<li><p>라인 클리어:</p>
+<ul>
+<li><p>1줄: 100점 × 레벨</p></li>
+<li><p>2줄: 300점 × 레벨</p></li>
+<li><p>3줄: 500점 × 레벨</p></li>
+<li><p>4줄: 800점 × 레벨</p></li>
+</ul>
+</li>
+<li><p>레벨: 10줄 제거마다 1레벨 상승</p></li>
+</ul>
+</section>
+</section>
+<section id="id11">
+<h2>코드 문서<a class="headerlink" href="#id11" title="Link to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">API 문서:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">tetris</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.Tetromino"><code class="docutils literal notranslate"><span class="pre">Tetromino</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.Tetris"><code class="docutils literal notranslate"><span class="pre">Tetris</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_grid"><code class="docutils literal notranslate"><span class="pre">draw_grid()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_piece"><code class="docutils literal notranslate"><span class="pre">draw_piece()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_board"><code class="docutils literal notranslate"><span class="pre">draw_board()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_player_info"><code class="docutils literal notranslate"><span class="pre">draw_player_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.draw_next_piece"><code class="docutils literal notranslate"><span class="pre">draw_next_piece()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="modules.html#tetris.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="module-tetris">
+<span id="id12"></span><h3>모듈 및 클래스<a class="headerlink" href="#module-tetris" title="Link to this heading"></a></h3>
+<p>Dual Tetris - 2인용 대전 테트리스 게임</p>
+<p>Python과 Pygame을 사용하여 구현한 2인 대전 테트리스입니다.
+한 플레이어가 라인을 제거하면 상대방에게 공격 라인이 추가됩니다.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tetris.Tetromino">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">Tetromino</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetromino"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetromino" title="Link to this definition"></a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>떨어지는 테트로미노 블록을 나타내는 클래스</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetromino.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetromino.__init__"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetromino.__init__" title="Link to this definition"></a></dt>
+<dd><p>테트로미노 객체 초기화</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>int</em>) – 그리드 상의 x 좌표 (가로 위치)</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – 그리드 상의 y 좌표 (세로 위치)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetromino.rotate">
+<span class="sig-name descname"><span class="pre">rotate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetromino.rotate"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetromino.rotate" title="Link to this definition"></a></dt>
+<dd><p>블록을 시계방향으로 90도 회전</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>회전된 블록의 형태 (2차원 배열)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetromino.get_shape">
+<span class="sig-name descname"><span class="pre">get_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetromino.get_shape"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetromino.get_shape" title="Link to this definition"></a></dt>
+<dd><p>현재 블록의 형태 반환</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>현재 블록의 형태 (2차원 배열)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="tetris.Tetris">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">Tetris</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris" title="Link to this definition"></a></dt>
+<dd><p>기반 클래스: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>테트리스 게임 로직을 관리하는 클래스 (각 플레이어당 하나의 인스턴스)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.__init__"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.__init__" title="Link to this definition"></a></dt>
+<dd><p>테트리스 게임 객체 초기화</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>player_id</strong> (<em>int</em>) – 플레이어 번호 (1 또는 2)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.spawn_piece">
+<span class="sig-name descname"><span class="pre">spawn_piece</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.spawn_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.spawn_piece" title="Link to this definition"></a></dt>
+<dd><p>새 블록 생성 및 배치
+- 다음 블록을 현재 블록으로 이동
+- 새로운 다음 블록 생성
+- 배치할 위치에 이미 블록이 있으면 게임 오버</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.check_collision">
+<span class="sig-name descname"><span class="pre">check_collision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.check_collision"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.check_collision" title="Link to this definition"></a></dt>
+<dd><p>블록과 보드/다른 블록과의 충돌 검사</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>int</em>) – 검사할 x 좌표</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – 검사할 y 좌표</p></li>
+<li><p><strong>shape</strong> (<em>list</em><em>, </em><em>optional</em>) – 검사할 블록 형태. None이면 현재 블록 사용</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환<span class="colon">:</span></dt>
+<dd class="field-even"><p>충돌이 있으면 True, 없으면 False</p>
+</dd>
+<dt class="field-odd">반환 형식<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.merge_piece">
+<span class="sig-name descname"><span class="pre">merge_piece</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.merge_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.merge_piece" title="Link to this definition"></a></dt>
+<dd><p>현재 블록을 그리드에 고정 (더 이상 움직일 수 없음)
+블록의 색상 정보를 그리드에 저장</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.clear_lines">
+<span class="sig-name descname"><span class="pre">clear_lines</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.clear_lines"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.clear_lines" title="Link to this definition"></a></dt>
+<dd><p>완성된 라인(가로줄이 완전히 채워진 줄)을 제거하고 점수 계산</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>제거한 라인 수 (상대방에게 보낼 공격 라인 계산용)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.add_garbage_lines">
+<span class="sig-name descname"><span class="pre">add_garbage_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_lines</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.add_garbage_lines"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.add_garbage_lines" title="Link to this definition"></a></dt>
+<dd><p>상대방으로부터 공격받은 라인 추가 (회색 블록, 랜덤 구멍 1개)</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>num_lines</strong> (<em>int</em>) – 추가할 공격 라인 수</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.move_piece">
+<span class="sig-name descname"><span class="pre">move_piece</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.move_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.move_piece" title="Link to this definition"></a></dt>
+<dd><p>블록을 지정된 방향으로 이동</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dx</strong> (<em>int</em>) – x축 이동량 (-1: 왼쪽, 1: 오른쪽)</p></li>
+<li><p><strong>dy</strong> (<em>int</em>) – y축 이동량 (1: 아래)</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환<span class="colon">:</span></dt>
+<dd class="field-even"><p>이동 성공 시 True, 실패 시 False</p>
+</dd>
+<dt class="field-odd">반환 형식<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.rotate_piece">
+<span class="sig-name descname"><span class="pre">rotate_piece</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.rotate_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.rotate_piece" title="Link to this definition"></a></dt>
+<dd><p>블록을 시계방향으로 90도 회전
+회전 후 벽에 부딪히면 좌우로 이동을 시도 (Wall Kick)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.hard_drop">
+<span class="sig-name descname"><span class="pre">hard_drop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.hard_drop"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.hard_drop" title="Link to this definition"></a></dt>
+<dd><p>블록을 즉시 바닥까지 낙하 (하드 드롭)</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>제거한 라인 수 (공격용)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tetris.Tetris.soft_drop">
+<span class="sig-name descname"><span class="pre">soft_drop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.soft_drop"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.Tetris.soft_drop" title="Link to this definition"></a></dt>
+<dd><p>블록을 한 칸 빠르게 낙하 (소프트 드롭)</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(계속 움직일 수 있는지 여부, 제거한 라인 수)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tetris.draw_grid">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_grid"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.draw_grid" title="Link to this definition"></a></dt>
+<dd><p>게임 보드의 그리드 선 그리기</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 보드의 x축 시작 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 보드의 y축 시작 위치</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tetris.draw_piece">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_piece</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">piece</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.draw_piece" title="Link to this definition"></a></dt>
+<dd><p>현재 떨어지는 블록 그리기</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>piece</strong> – 그릴 Tetromino 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 보드의 x축 시작 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 보드의 y축 시작 위치</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tetris.draw_board">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_board</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_board"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.draw_board" title="Link to this definition"></a></dt>
+<dd><p>게임 보드에 고정된 블록들 그리기</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>game</strong> – Tetris 게임 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 보드의 x축 시작 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 보드의 y축 시작 위치</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tetris.draw_player_info">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_player_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_player_info"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.draw_player_info" title="Link to this definition"></a></dt>
+<dd><p>플레이어 정보 표시 (이름, 점수)</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>game</strong> – Tetris 게임 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 정보 표시 x 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 정보 표시 y 위치</p></li>
+<li><p><strong>font</strong> – 사용할 폰트 객체</p></li>
+<li><p><strong>player_name</strong> (<em>str</em>) – 표시할 플레이어 이름</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tetris.draw_next_piece">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_next_piece</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_font</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_next_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.draw_next_piece" title="Link to this definition"></a></dt>
+<dd><p>다음에 나올 블록 미리보기</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>game</strong> – Tetris 게임 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 미리보기 박스 x 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 미리보기 박스 y 위치</p></li>
+<li><p><strong>small_font</strong> – 사용할 폰트 객체</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="tetris.main">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#main"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#tetris.main" title="Link to this definition"></a></dt>
+<dd><p>메인 게임 함수 - 게임 초기화 및 메인 루프 실행</p>
+</dd></dl>
+
+<section id="tetromino">
+<h4>Tetromino 클래스<a class="headerlink" href="#tetromino" title="Link to this heading"></a></h4>
+<dl class="py class">
+<dt class="sig sig-object py" id="id0">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">Tetromino</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetromino"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd><p>떨어지는 테트로미노 블록을 나타내는 클래스</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="id13">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetromino.__init__"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id13" title="Link to this definition"></a></dt>
+<dd><p>테트로미노 객체 초기화</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>int</em>) – 그리드 상의 x 좌표 (가로 위치)</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – 그리드 상의 y 좌표 (세로 위치)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id14">
+<span class="sig-name descname"><span class="pre">rotate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetromino.rotate"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id14" title="Link to this definition"></a></dt>
+<dd><p>블록을 시계방향으로 90도 회전</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>회전된 블록의 형태 (2차원 배열)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id15">
+<span class="sig-name descname"><span class="pre">get_shape</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetromino.get_shape"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id15" title="Link to this definition"></a></dt>
+<dd><p>현재 블록의 형태 반환</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>현재 블록의 형태 (2차원 배열)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="tetris">
+<h4>Tetris 클래스<a class="headerlink" href="#tetris" title="Link to this heading"></a></h4>
+<dl class="py class">
+<dt class="sig sig-object py" id="id16">
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">Tetris</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id16" title="Link to this definition"></a></dt>
+<dd><p>테트리스 게임 로직을 관리하는 클래스 (각 플레이어당 하나의 인스턴스)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="id17">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">player_id</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.__init__"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id17" title="Link to this definition"></a></dt>
+<dd><p>테트리스 게임 객체 초기화</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>player_id</strong> (<em>int</em>) – 플레이어 번호 (1 또는 2)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id18">
+<span class="sig-name descname"><span class="pre">spawn_piece</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.spawn_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id18" title="Link to this definition"></a></dt>
+<dd><p>새 블록 생성 및 배치
+- 다음 블록을 현재 블록으로 이동
+- 새로운 다음 블록 생성
+- 배치할 위치에 이미 블록이 있으면 게임 오버</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id19">
+<span class="sig-name descname"><span class="pre">check_collision</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.check_collision"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id19" title="Link to this definition"></a></dt>
+<dd><p>블록과 보드/다른 블록과의 충돌 검사</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>int</em>) – 검사할 x 좌표</p></li>
+<li><p><strong>y</strong> (<em>int</em>) – 검사할 y 좌표</p></li>
+<li><p><strong>shape</strong> (<em>list</em><em>, </em><em>optional</em>) – 검사할 블록 형태. None이면 현재 블록 사용</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환<span class="colon">:</span></dt>
+<dd class="field-even"><p>충돌이 있으면 True, 없으면 False</p>
+</dd>
+<dt class="field-odd">반환 형식<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id20">
+<span class="sig-name descname"><span class="pre">merge_piece</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.merge_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id20" title="Link to this definition"></a></dt>
+<dd><p>현재 블록을 그리드에 고정 (더 이상 움직일 수 없음)
+블록의 색상 정보를 그리드에 저장</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id21">
+<span class="sig-name descname"><span class="pre">clear_lines</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.clear_lines"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id21" title="Link to this definition"></a></dt>
+<dd><p>완성된 라인(가로줄이 완전히 채워진 줄)을 제거하고 점수 계산</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>제거한 라인 수 (상대방에게 보낼 공격 라인 계산용)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id22">
+<span class="sig-name descname"><span class="pre">add_garbage_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">num_lines</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.add_garbage_lines"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id22" title="Link to this definition"></a></dt>
+<dd><p>상대방으로부터 공격받은 라인 추가 (회색 블록, 랜덤 구멍 1개)</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>num_lines</strong> (<em>int</em>) – 추가할 공격 라인 수</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id23">
+<span class="sig-name descname"><span class="pre">move_piece</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.move_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id23" title="Link to this definition"></a></dt>
+<dd><p>블록을 지정된 방향으로 이동</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dx</strong> (<em>int</em>) – x축 이동량 (-1: 왼쪽, 1: 오른쪽)</p></li>
+<li><p><strong>dy</strong> (<em>int</em>) – y축 이동량 (1: 아래)</p></li>
+</ul>
+</dd>
+<dt class="field-even">반환<span class="colon">:</span></dt>
+<dd class="field-even"><p>이동 성공 시 True, 실패 시 False</p>
+</dd>
+<dt class="field-odd">반환 형식<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id24">
+<span class="sig-name descname"><span class="pre">rotate_piece</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.rotate_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id24" title="Link to this definition"></a></dt>
+<dd><p>블록을 시계방향으로 90도 회전
+회전 후 벽에 부딪히면 좌우로 이동을 시도 (Wall Kick)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id25">
+<span class="sig-name descname"><span class="pre">hard_drop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.hard_drop"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id25" title="Link to this definition"></a></dt>
+<dd><p>블록을 즉시 바닥까지 낙하 (하드 드롭)</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>제거한 라인 수 (공격용)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id26">
+<span class="sig-name descname"><span class="pre">soft_drop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#Tetris.soft_drop"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id26" title="Link to this definition"></a></dt>
+<dd><p>블록을 한 칸 빠르게 낙하 (소프트 드롭)</p>
+<dl class="field-list simple">
+<dt class="field-odd">반환<span class="colon">:</span></dt>
+<dd class="field-odd"><p>(계속 움직일 수 있는지 여부, 제거한 라인 수)</p>
+</dd>
+<dt class="field-even">반환 형식<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="id27">
+<h3>함수 목록<a class="headerlink" href="#id27" title="Link to this heading"></a></h3>
+<section id="id28">
+<h4>화면 그리기 함수<a class="headerlink" href="#id28" title="Link to this heading"></a></h4>
+<dl class="py function">
+<dt class="sig sig-object py" id="id29">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_grid"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id29" title="Link to this definition"></a></dt>
+<dd><p>게임 보드의 그리드 선 그리기</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 보드의 x축 시작 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 보드의 y축 시작 위치</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="id30">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_piece</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">piece</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id30" title="Link to this definition"></a></dt>
+<dd><p>현재 떨어지는 블록 그리기</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>piece</strong> – 그릴 Tetromino 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 보드의 x축 시작 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 보드의 y축 시작 위치</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="id31">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_board</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_board"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id31" title="Link to this definition"></a></dt>
+<dd><p>게임 보드에 고정된 블록들 그리기</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>game</strong> – Tetris 게임 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 보드의 x축 시작 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 보드의 y축 시작 위치</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="id32">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_player_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">player_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_player_info"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id32" title="Link to this definition"></a></dt>
+<dd><p>플레이어 정보 표시 (이름, 점수)</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>game</strong> – Tetris 게임 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 정보 표시 x 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 정보 표시 y 위치</p></li>
+<li><p><strong>font</strong> – 사용할 폰트 객체</p></li>
+<li><p><strong>player_name</strong> (<em>str</em>) – 표시할 플레이어 이름</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="id33">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">draw_next_piece</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">screen</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">game</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">small_font</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#draw_next_piece"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id33" title="Link to this definition"></a></dt>
+<dd><p>다음에 나올 블록 미리보기</p>
+<dl class="field-list simple">
+<dt class="field-odd">매개변수<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>screen</strong> – Pygame 화면 객체</p></li>
+<li><p><strong>game</strong> – Tetris 게임 객체</p></li>
+<li><p><strong>offset_x</strong> (<em>int</em>) – 미리보기 박스 x 위치</p></li>
+<li><p><strong>offset_y</strong> (<em>int</em>) – 미리보기 박스 y 위치</p></li>
+<li><p><strong>small_font</strong> – 사용할 폰트 객체</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="id34">
+<h4>메인 함수<a class="headerlink" href="#id34" title="Link to this heading"></a></h4>
+<dl class="py function">
+<dt class="sig sig-object py" id="id35">
+<span class="sig-prename descclassname"><span class="pre">tetris.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tetris.html#main"><span class="viewcode-link"><span class="pre">[소스]</span></span></a><a class="headerlink" href="#id35" title="Link to this definition"></a></dt>
+<dd><p>메인 게임 함수 - 게임 초기화 및 메인 루프 실행</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+<section id="id36">
+<h2>색상 및 설정<a class="headerlink" href="#id36" title="Link to this heading"></a></h2>
+<p>게임에서 사용되는 색상:</p>
+<ul class="simple">
+<li><p><strong>BLACK</strong> - 배경색</p></li>
+<li><p><strong>WHITE</strong> - 텍스트 및 선 색상</p></li>
+<li><p><strong>GRAY</strong> - 공격 라인 색상</p></li>
+<li><p><strong>CYAN</strong> - I 블록</p></li>
+<li><p><strong>YELLOW</strong> - O 블록</p></li>
+<li><p><strong>PURPLE</strong> - T 블록</p></li>
+<li><p><strong>GREEN</strong> - S 블록</p></li>
+<li><p><strong>RED</strong> - Z 블록</p></li>
+<li><p><strong>BLUE</strong> - L 블록</p></li>
+<li><p><strong>ORANGE</strong> - J 블록</p></li>
+</ul>
+<p>게임 설정:</p>
+<ul class="simple">
+<li><p><strong>BLOCK_SIZE</strong>: 25픽셀</p></li>
+<li><p><strong>GRID_WIDTH</strong>: 10칸</p></li>
+<li><p><strong>GRID_HEIGHT</strong>: 20칸</p></li>
+<li><p><strong>SCREEN_WIDTH</strong>: 800픽셀</p></li>
+<li><p><strong>SCREEN_HEIGHT</strong>: 680픽셀</p></li>
+</ul>
+</section>
+<section id="id37">
+<h2>설치 및 실행<a class="headerlink" href="#id37" title="Link to this heading"></a></h2>
+<section id="id38">
+<h3>필요 사항<a class="headerlink" href="#id38" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Python 3.7 이상</p></li>
+<li><p>Pygame 라이브러리</p></li>
+</ul>
+</section>
+<section id="id39">
+<h3>설치<a class="headerlink" href="#id39" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pygame
+</pre></div>
+</div>
+</section>
+<section id="id40">
+<h3>실행<a class="headerlink" href="#id40" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>tetris.py
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id41">
+<h2>라이선스<a class="headerlink" href="#id41" title="Link to this heading"></a></h2>
+<p>이 프로젝트는 교육 목적으로 제작되었습니다.</p>
+</section>
+<section id="id42">
+<h2>인덱스 및 검색<a class="headerlink" href="#id42" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">색인</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">모듈 목록</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">검색 페이지</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-right" title="tetris" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
