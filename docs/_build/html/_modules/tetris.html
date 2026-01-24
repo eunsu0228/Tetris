@@ -1,0 +1,818 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ko" data-content_root="../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tetris &mdash; Dual Tetris 1.0.0 문서</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5a0dd2f0"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=afa94a99"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="색인" href="../genindex.html" />
+    <link rel="search" title="검색" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Dual Tetris
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API 문서:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">tetris</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#tetris.Tetromino"><code class="docutils literal notranslate"><span class="pre">Tetromino</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetromino.__init__"><code class="docutils literal notranslate"><span class="pre">Tetromino.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetromino.rotate"><code class="docutils literal notranslate"><span class="pre">Tetromino.rotate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetromino.get_shape"><code class="docutils literal notranslate"><span class="pre">Tetromino.get_shape()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#tetris.Tetris"><code class="docutils literal notranslate"><span class="pre">Tetris</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.__init__"><code class="docutils literal notranslate"><span class="pre">Tetris.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.spawn_piece"><code class="docutils literal notranslate"><span class="pre">Tetris.spawn_piece()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.check_collision"><code class="docutils literal notranslate"><span class="pre">Tetris.check_collision()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.merge_piece"><code class="docutils literal notranslate"><span class="pre">Tetris.merge_piece()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.clear_lines"><code class="docutils literal notranslate"><span class="pre">Tetris.clear_lines()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.add_garbage_lines"><code class="docutils literal notranslate"><span class="pre">Tetris.add_garbage_lines()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.move_piece"><code class="docutils literal notranslate"><span class="pre">Tetris.move_piece()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.rotate_piece"><code class="docutils literal notranslate"><span class="pre">Tetris.rotate_piece()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.hard_drop"><code class="docutils literal notranslate"><span class="pre">Tetris.hard_drop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modules.html#tetris.Tetris.soft_drop"><code class="docutils literal notranslate"><span class="pre">Tetris.soft_drop()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#tetris.draw_grid"><code class="docutils literal notranslate"><span class="pre">draw_grid()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#tetris.draw_piece"><code class="docutils literal notranslate"><span class="pre">draw_piece()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#tetris.draw_board"><code class="docutils literal notranslate"><span class="pre">draw_board()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#tetris.draw_player_info"><code class="docutils literal notranslate"><span class="pre">draw_player_info()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#tetris.draw_next_piece"><code class="docutils literal notranslate"><span class="pre">draw_next_piece()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modules.html#tetris.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Dual Tetris</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">모듈 코드</a></li>
+      <li class="breadcrumb-item active">tetris</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>tetris의 소스 코드</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Dual Tetris - 2인용 대전 테트리스 게임</span>
+
+<span class="sd">Python과 Pygame을 사용하여 구현한 2인 대전 테트리스입니다.</span>
+<span class="sd">한 플레이어가 라인을 제거하면 상대방에게 공격 라인이 추가됩니다.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pygame</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+
+<span class="c1"># Pygame 초기화</span>
+<span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+
+<span class="c1"># ==================== 색상 정의 ====================</span>
+<span class="c1"># RGB 값으로 색상 정의 (R, G, B)</span>
+<span class="n">BLACK</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>          <span class="c1"># 배경색</span>
+<span class="n">WHITE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>    <span class="c1"># 텍스트 및 선 색상</span>
+<span class="n">GRAY</span> <span class="o">=</span> <span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>     <span class="c1"># 공격 라인 색상</span>
+<span class="n">DARK_GRAY</span> <span class="o">=</span> <span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>   <span class="c1"># 미리보기 박스 테두리</span>
+<span class="n">CYAN</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>       <span class="c1"># I 블록 및 Player 1 텍스트</span>
+<span class="n">YELLOW</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1"># O 블록 및 승리 텍스트</span>
+<span class="n">PURPLE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">128</span><span class="p">)</span>     <span class="c1"># T 블록</span>
+<span class="n">GREEN</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>        <span class="c1"># S 블록 및 재시작 버튼</span>
+<span class="n">RED</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>          <span class="c1"># Z 블록 및 VS 텍스트</span>
+<span class="n">BLUE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>         <span class="c1"># L 블록</span>
+<span class="n">ORANGE</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1"># J 블록 및 Player 2 텍스트</span>
+
+<span class="c1"># ==================== 게임 설정 ====================</span>
+<span class="n">BLOCK_SIZE</span> <span class="o">=</span> <span class="mi">25</span>            <span class="c1"># 각 블록의 픽셀 크기</span>
+<span class="n">GRID_WIDTH</span> <span class="o">=</span> <span class="mi">10</span>            <span class="c1"># 게임 보드의 가로 블록 수</span>
+<span class="n">GRID_HEIGHT</span> <span class="o">=</span> <span class="mi">20</span>           <span class="c1"># 게임 보드의 세로 블록 수</span>
+
+<span class="c1"># 화면 크기 계산</span>
+<span class="c1"># 좌측 보드 + Next 박스 + 중앙 정보 + Next 박스 + 우측 보드</span>
+<span class="n">SCREEN_WIDTH</span> <span class="o">=</span> <span class="n">BLOCK_SIZE</span> <span class="o">*</span> <span class="n">GRID_WIDTH</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">400</span>   <span class="c1"># 총 화면 너비</span>
+<span class="n">SCREEN_HEIGHT</span> <span class="o">=</span> <span class="n">BLOCK_SIZE</span> <span class="o">*</span> <span class="n">GRID_HEIGHT</span> <span class="o">+</span> <span class="mi">180</span>     <span class="c1"># 총 화면 높이 (하단 조작 안내 공간 포함)</span>
+
+<span class="c1"># ==================== 테트로미노 모양 정의 ====================</span>
+<span class="c1"># 7가지 테트로미노 블록의 형태를 2차원 배열로 정의</span>
+<span class="c1"># 1은 블록이 있는 부분, 0은 빈 공간</span>
+<span class="n">SHAPES</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span>              <span class="c1"># I - 일자 블록</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span>            <span class="c1"># O - 정사각형 블록</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span>      <span class="c1"># T - T자 블록</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span>      <span class="c1"># S - S자 블록</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]],</span>      <span class="c1"># Z - Z자 블록</span>
+    <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span>      <span class="c1"># L - L자 블록</span>
+    <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>       <span class="c1"># J - 역L자 블록</span>
+<span class="p">]</span>
+
+<span class="c1"># 각 테트로미노에 대응하는 색상 배열</span>
+<span class="n">SHAPE_COLORS</span> <span class="o">=</span> <span class="p">[</span><span class="n">CYAN</span><span class="p">,</span> <span class="n">YELLOW</span><span class="p">,</span> <span class="n">PURPLE</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">,</span> <span class="n">RED</span><span class="p">,</span> <span class="n">BLUE</span><span class="p">,</span> <span class="n">ORANGE</span><span class="p">]</span>
+
+
+<span class="c1"># ==================== Tetromino 클래스 ====================</span>
+<div class="viewcode-block" id="Tetromino">
+<a class="viewcode-back" href="../modules.html#tetris.Tetromino">[문서]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Tetromino</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;떨어지는 테트로미노 블록을 나타내는 클래스&quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="Tetromino.__init__">
+<a class="viewcode-back" href="../modules.html#tetris.Tetromino.__init__">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        테트로미노 객체 초기화</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            x (int): 그리드 상의 x 좌표 (가로 위치)</span>
+<span class="sd">            y (int): 그리드 상의 y 좌표 (세로 위치)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>  <span class="c1"># 현재 x 좌표</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>  <span class="c1"># 현재 y 좌표</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shape_index</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">SHAPES</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># 랜덤하게 블록 형태 선택</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">SHAPES</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">shape_index</span><span class="p">]</span>  <span class="c1"># 선택된 블록의 형태</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">SHAPE_COLORS</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">shape_index</span><span class="p">]</span>  <span class="c1"># 선택된 블록의 색상</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 회전 상태 (현재는 미사용)</span></div>
+
+
+<div class="viewcode-block" id="Tetromino.rotate">
+<a class="viewcode-back" href="../modules.html#tetris.Tetromino.rotate">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rotate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        블록을 시계방향으로 90도 회전</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            list: 회전된 블록의 형태 (2차원 배열)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rotated</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># 행과 열을 바꾸면서 역순으로 배치하여 90도 회전 효과</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+            <span class="n">new_row</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">new_row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">rotated</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_row</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">rotated</span></div>
+
+
+<div class="viewcode-block" id="Tetromino.get_shape">
+<a class="viewcode-back" href="../modules.html#tetris.Tetromino.get_shape">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">get_shape</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        현재 블록의 형태 반환</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            list: 현재 블록의 형태 (2차원 배열)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">shape</span></div>
+</div>
+
+
+
+<span class="c1"># ==================== Tetris 게임 클래스 ====================</span>
+<div class="viewcode-block" id="Tetris">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris">[문서]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Tetris</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;테트리스 게임 로직을 관리하는 클래스 (각 플레이어당 하나의 인스턴스)&quot;&quot;&quot;</span>
+    
+<div class="viewcode-block" id="Tetris.__init__">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.__init__">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">player_id</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        테트리스 게임 객체 초기화</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            player_id (int): 플레이어 번호 (1 또는 2)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">player_id</span> <span class="o">=</span> <span class="n">player_id</span>  <span class="c1"># 플레이어 식별 번호</span>
+        <span class="c1"># 게임 보드 초기화 (0은 빈 칸, 색상 값이 있으면 블록이 고정된 칸)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">grid</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">GRID_WIDTH</span><span class="p">)]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">GRID_HEIGHT</span><span class="p">)]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 현재 조작 중인 블록</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next_piece</span> <span class="o">=</span> <span class="n">Tetromino</span><span class="p">(</span><span class="n">GRID_WIDTH</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># 다음에 나올 블록</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># 게임 오버 상태</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 현재 점수</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lines_cleared</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># 제거한 총 라인 수</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># 현재 레벨</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spawn_piece</span><span class="p">()</span>  <span class="c1"># 첫 번째 블록 생성</span></div>
+
+
+<div class="viewcode-block" id="Tetris.spawn_piece">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.spawn_piece">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">spawn_piece</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        새 블록 생성 및 배치</span>
+<span class="sd">        - 다음 블록을 현재 블록으로 이동</span>
+<span class="sd">        - 새로운 다음 블록 생성</span>
+<span class="sd">        - 배치할 위치에 이미 블록이 있으면 게임 오버</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">next_piece</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">next_piece</span> <span class="o">=</span> <span class="n">Tetromino</span><span class="p">(</span><span class="n">GRID_WIDTH</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        
+        <span class="c1"># 새 블록이 배치될 위치에 이미 블록이 있으면 게임 오버</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_collision</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">y</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">game_over</span> <span class="o">=</span> <span class="kc">True</span></div>
+
+
+<div class="viewcode-block" id="Tetris.check_collision">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.check_collision">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">check_collision</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">shape</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        블록과 보드/다른 블록과의 충돌 검사</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            x (int): 검사할 x 좌표</span>
+<span class="sd">            y (int): 검사할 y 좌표</span>
+<span class="sd">            shape (list, optional): 검사할 블록 형태. None이면 현재 블록 사용</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: 충돌이 있으면 True, 없으면 False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">shape</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()</span>
+        
+        <span class="c1"># 블록의 각 셀에 대해 충돌 검사</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">cell</span><span class="p">:</span>  <span class="c1"># 블록이 있는 셀만 검사</span>
+                    <span class="n">new_x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">j</span>
+                    <span class="n">new_y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="n">i</span>
+                    
+                    <span class="c1"># 벽 충돌 또는 바닥 충돌 또는 다른 블록과 충돌 검사</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">new_x</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">new_x</span> <span class="o">&gt;=</span> <span class="n">GRID_WIDTH</span> <span class="ow">or</span> 
+                        <span class="n">new_y</span> <span class="o">&gt;=</span> <span class="n">GRID_HEIGHT</span> <span class="ow">or</span>
+                        <span class="p">(</span><span class="n">new_y</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">[</span><span class="n">new_y</span><span class="p">][</span><span class="n">new_x</span><span class="p">])):</span>
+                        <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="Tetris.merge_piece">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.merge_piece">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">merge_piece</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        현재 블록을 그리드에 고정 (더 이상 움직일 수 없음)</span>
+<span class="sd">        블록의 색상 정보를 그리드에 저장</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">cell</span><span class="p">:</span>  <span class="c1"># 블록이 있는 부분만 그리드에 저장</span>
+                    <span class="n">grid_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">i</span>
+                    <span class="n">grid_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">j</span>
+                    <span class="k">if</span> <span class="n">grid_y</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>  <span class="c1"># 화면 위쪽 범위 체크</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">[</span><span class="n">grid_y</span><span class="p">][</span><span class="n">grid_x</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">color</span></div>
+
+
+<div class="viewcode-block" id="Tetris.clear_lines">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.clear_lines">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">clear_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        완성된 라인(가로줄이 완전히 채워진 줄)을 제거하고 점수 계산</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            int: 제거한 라인 수 (상대방에게 보낼 공격 라인 계산용)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">lines_to_clear</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># 완성된 라인 찾기</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">all</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>  <span class="c1"># 모든 칸이 채워져 있으면</span>
+                <span class="n">lines_to_clear</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        
+        <span class="c1"># 완성된 라인 제거 및 위에서 아래로 블록 이동</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines_to_clear</span><span class="p">:</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">[</span><span class="n">line</span><span class="p">]</span>  <span class="c1"># 해당 라인 삭제</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">GRID_WIDTH</span><span class="p">)])</span>  <span class="c1"># 맨 위에 빈 라인 추가</span>
+        
+        <span class="c1"># 점수 및 레벨 계산</span>
+        <span class="k">if</span> <span class="n">lines_to_clear</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">lines_cleared</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines_to_clear</span><span class="p">)</span>
+            <span class="c1"># 라인 수에 따른 점수 (1줄: 100, 2줄: 300, 3줄: 500, 4줄: 800)</span>
+            <span class="n">points</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">800</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">+=</span> <span class="n">points</span><span class="p">[</span><span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lines_to_clear</span><span class="p">),</span> <span class="mi">4</span><span class="p">)]</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">level</span>
+            <span class="c1"># 10줄마다 레벨 1 상승</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lines_cleared</span> <span class="o">//</span> <span class="mi">10</span> <span class="o">+</span> <span class="mi">1</span>
+        
+        <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">lines_to_clear</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Tetris.add_garbage_lines">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.add_garbage_lines">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">add_garbage_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_lines</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        상대방으로부터 공격받은 라인 추가 (회색 블록, 랜덤 구멍 1개)</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            num_lines (int): 추가할 공격 라인 수</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_lines</span><span class="p">):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  <span class="c1"># 맨 위 라인 제거 (블록을 위로 밀어올림)</span>
+            <span class="c1"># 랜덤 위치에 구멍이 하나 있는 회색 라인 생성</span>
+            <span class="n">hole_position</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">GRID_WIDTH</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">garbage_line</span> <span class="o">=</span> <span class="p">[</span><span class="n">GRAY</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">hole_position</span> <span class="k">else</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">GRID_WIDTH</span><span class="p">)]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">garbage_line</span><span class="p">)</span>  <span class="c1"># 맨 아래에 공격 라인 추가</span></div>
+
+
+<div class="viewcode-block" id="Tetris.move_piece">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.move_piece">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">move_piece</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dx</span><span class="p">,</span> <span class="n">dy</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        블록을 지정된 방향으로 이동</span>
+<span class="sd">        </span>
+<span class="sd">        Args:</span>
+<span class="sd">            dx (int): x축 이동량 (-1: 왼쪽, 1: 오른쪽)</span>
+<span class="sd">            dy (int): y축 이동량 (1: 아래)</span>
+<span class="sd">            </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            bool: 이동 성공 시 True, 실패 시 False</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">dx</span>
+        <span class="n">new_y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">dy</span>
+        
+        <span class="c1"># 충돌이 없으면 이동</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_collision</span><span class="p">(</span><span class="n">new_x</span><span class="p">,</span> <span class="n">new_y</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">new_x</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">new_y</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="Tetris.rotate_piece">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.rotate_piece">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">rotate_piece</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        블록을 시계방향으로 90도 회전</span>
+<span class="sd">        회전 후 벽에 부딪히면 좌우로 이동을 시도 (Wall Kick)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">rotated_shape</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">rotate</span><span class="p">()</span>
+        
+        <span class="c1"># 회전 후 충돌이 없으면 회전 적용</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_collision</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">rotated_shape</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">rotated_shape</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># 벽 킥: 좌우로 이동하여 회전 가능한지 시도</span>
+            <span class="k">for</span> <span class="n">dx</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_collision</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">dx</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">rotated_shape</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">x</span> <span class="o">+=</span> <span class="n">dx</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">current_piece</span><span class="o">.</span><span class="n">shape</span> <span class="o">=</span> <span class="n">rotated_shape</span>
+                    <span class="k">break</span></div>
+
+
+<div class="viewcode-block" id="Tetris.hard_drop">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.hard_drop">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">hard_drop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        블록을 즉시 바닥까지 낙하 (하드 드롭)</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            int: 제거한 라인 수 (공격용)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># 더 이상 내려갈 수 없을 때까지 이동</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">move_piece</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">+=</span> <span class="mi">2</span>  <span class="c1"># 한 칸당 2점</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">merge_piece</span><span class="p">()</span>  <span class="c1"># 블록 고정</span>
+        <span class="n">cleared</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clear_lines</span><span class="p">()</span>  <span class="c1"># 라인 제거</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">spawn_piece</span><span class="p">()</span>  <span class="c1"># 다음 블록 생성</span>
+        <span class="k">return</span> <span class="n">cleared</span></div>
+
+
+<div class="viewcode-block" id="Tetris.soft_drop">
+<a class="viewcode-back" href="../modules.html#tetris.Tetris.soft_drop">[문서]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">soft_drop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        블록을 한 칸 빠르게 낙하 (소프트 드롭)</span>
+<span class="sd">        </span>
+<span class="sd">        Returns:</span>
+<span class="sd">            tuple: (계속 움직일 수 있는지 여부, 제거한 라인 수)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">move_piece</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">score</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># 한 칸당 1점</span>
+            <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="mi">0</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># 더 이상 내려갈 수 없으면 블록 고정 및 다음 블록 생성</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">merge_piece</span><span class="p">()</span>
+            <span class="n">cleared</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">clear_lines</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">spawn_piece</span><span class="p">()</span>
+            <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="n">cleared</span></div>
+</div>
+
+
+
+<span class="c1"># ==================== 화면 그리기 함수들 ====================</span>
+
+<div class="viewcode-block" id="draw_grid">
+<a class="viewcode-back" href="../modules.html#tetris.draw_grid">[문서]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_grid</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    게임 보드의 그리드 선 그리기</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        screen: Pygame 화면 객체</span>
+<span class="sd">        offset_x (int): 보드의 x축 시작 위치</span>
+<span class="sd">        offset_y (int): 보드의 y축 시작 위치</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 세로 선 그리기</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">GRID_WIDTH</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">GRAY</span><span class="p">,</span> 
+                        <span class="p">(</span><span class="n">offset_x</span> <span class="o">+</span> <span class="n">x</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span><span class="p">,</span> <span class="n">offset_y</span><span class="p">),</span> 
+                        <span class="p">(</span><span class="n">offset_x</span> <span class="o">+</span> <span class="n">x</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span><span class="p">,</span> <span class="n">offset_y</span> <span class="o">+</span> <span class="n">GRID_HEIGHT</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span><span class="p">))</span>
+    
+    <span class="c1"># 가로 선 그리기</span>
+    <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">GRID_HEIGHT</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">GRAY</span><span class="p">,</span> 
+                        <span class="p">(</span><span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span><span class="p">),</span> 
+                        <span class="p">(</span><span class="n">offset_x</span> <span class="o">+</span> <span class="n">GRID_WIDTH</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span><span class="p">,</span> <span class="n">offset_y</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="draw_piece">
+<a class="viewcode-back" href="../modules.html#tetris.draw_piece">[문서]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_piece</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">piece</span><span class="p">,</span> <span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    현재 떨어지는 블록 그리기</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        screen: Pygame 화면 객체</span>
+<span class="sd">        piece: 그릴 Tetromino 객체</span>
+<span class="sd">        offset_x (int): 보드의 x축 시작 위치</span>
+<span class="sd">        offset_y (int): 보드의 y축 시작 위치</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="n">piece</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">cell</span><span class="p">:</span>  <span class="c1"># 블록이 있는 부분만 그리기</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">offset_x</span> <span class="o">+</span> <span class="p">(</span><span class="n">piece</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span>
+                <span class="n">y</span> <span class="o">=</span> <span class="n">offset_y</span> <span class="o">+</span> <span class="p">(</span><span class="n">piece</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span>
+                <span class="c1"># 테두리를 남기고 블록 그리기</span>
+                <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">piece</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> 
+                               <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">BLOCK_SIZE</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">BLOCK_SIZE</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="draw_board">
+<a class="viewcode-back" href="../modules.html#tetris.draw_board">[문서]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_board</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">game</span><span class="p">,</span> <span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    게임 보드에 고정된 블록들 그리기</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        screen: Pygame 화면 객체</span>
+<span class="sd">        game: Tetris 게임 객체</span>
+<span class="sd">        offset_x (int): 보드의 x축 시작 위치</span>
+<span class="sd">        offset_y (int): 보드의 y축 시작 위치</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">y</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">game</span><span class="o">.</span><span class="n">grid</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">cell</span><span class="p">:</span>  <span class="c1"># 블록이 있는 셀만 그리기</span>
+                <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">cell</span><span class="p">,</span> 
+                               <span class="p">(</span><span class="n">offset_x</span> <span class="o">+</span> <span class="n">x</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> 
+                                <span class="n">offset_y</span> <span class="o">+</span> <span class="n">y</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> 
+                                <span class="n">BLOCK_SIZE</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">BLOCK_SIZE</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="draw_player_info">
+<a class="viewcode-back" href="../modules.html#tetris.draw_player_info">[문서]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_player_info</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">game</span><span class="p">,</span> <span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span><span class="p">,</span> <span class="n">font</span><span class="p">,</span> <span class="n">player_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    플레이어 정보 표시 (이름, 점수)</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        screen: Pygame 화면 객체</span>
+<span class="sd">        game: Tetris 게임 객체</span>
+<span class="sd">        offset_x (int): 정보 표시 x 위치</span>
+<span class="sd">        offset_y (int): 정보 표시 y 위치</span>
+<span class="sd">        font: 사용할 폰트 객체</span>
+<span class="sd">        player_name (str): 표시할 플레이어 이름</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># 플레이어 이름 표시</span>
+    <span class="n">name_text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">player_name</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">name_text</span><span class="p">,</span> <span class="p">(</span><span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span><span class="p">))</span>
+    
+    <span class="c1"># 점수 표시</span>
+    <span class="n">score_text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">game</span><span class="o">.</span><span class="n">score</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">score_text</span><span class="p">,</span> <span class="p">(</span><span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span> <span class="o">+</span> <span class="mi">25</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="draw_next_piece">
+<a class="viewcode-back" href="../modules.html#tetris.draw_next_piece">[문서]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">draw_next_piece</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">game</span><span class="p">,</span> <span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span><span class="p">,</span> <span class="n">small_font</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    다음에 나올 블록 미리보기</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        screen: Pygame 화면 객체</span>
+<span class="sd">        game: Tetris 게임 객체</span>
+<span class="sd">        offset_x (int): 미리보기 박스 x 위치</span>
+<span class="sd">        offset_y (int): 미리보기 박스 y 위치</span>
+<span class="sd">        small_font: 사용할 폰트 객체</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># &quot;Next&quot; 텍스트 표시</span>
+    <span class="n">next_text</span> <span class="o">=</span> <span class="n">small_font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;Next:&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">next_text</span><span class="p">,</span> <span class="p">(</span><span class="n">offset_x</span><span class="p">,</span> <span class="n">offset_y</span><span class="p">))</span>
+    
+    <span class="c1"># 다음 블록 정보 가져오기</span>
+    <span class="n">next_piece</span> <span class="o">=</span> <span class="n">game</span><span class="o">.</span><span class="n">next_piece</span>
+    <span class="n">shape</span> <span class="o">=</span> <span class="n">next_piece</span><span class="o">.</span><span class="n">get_shape</span><span class="p">()</span>
+    
+    <span class="c1"># 미리보기용으로 블록 크기를 약간 작게 조정</span>
+    <span class="n">preview_block_size</span> <span class="o">=</span> <span class="n">BLOCK_SIZE</span> <span class="o">-</span> <span class="mi">5</span>
+    
+    <span class="c1"># 블록을 중앙에 배치하기 위한 오프셋 계산</span>
+    <span class="n">shape_width</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">*</span> <span class="n">preview_block_size</span>
+    <span class="n">shape_height</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="n">preview_block_size</span>
+    
+    <span class="n">start_x</span> <span class="o">=</span> <span class="n">offset_x</span> <span class="o">+</span> <span class="p">(</span><span class="mi">100</span> <span class="o">-</span> <span class="n">shape_width</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">start_y</span> <span class="o">=</span> <span class="n">offset_y</span> <span class="o">+</span> <span class="mi">30</span>
+    
+    <span class="c1"># 미리보기 박스 테두리 그리기</span>
+    <span class="n">preview_box_width</span> <span class="o">=</span> <span class="mi">100</span>
+    <span class="n">preview_box_height</span> <span class="o">=</span> <span class="mi">80</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">DARK_GRAY</span><span class="p">,</span> 
+                    <span class="p">(</span><span class="n">offset_x</span><span class="p">,</span> <span class="n">start_y</span> <span class="o">-</span> <span class="mi">5</span><span class="p">,</span> <span class="n">preview_box_width</span><span class="p">,</span> <span class="n">preview_box_height</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+    
+    <span class="c1"># 다음 블록 그리기</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">shape</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">cell</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">cell</span><span class="p">:</span>
+                <span class="n">x</span> <span class="o">=</span> <span class="n">start_x</span> <span class="o">+</span> <span class="n">j</span> <span class="o">*</span> <span class="n">preview_block_size</span>
+                <span class="n">y</span> <span class="o">=</span> <span class="n">start_y</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="n">preview_block_size</span>
+                <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">rect</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">next_piece</span><span class="o">.</span><span class="n">color</span><span class="p">,</span> 
+                               <span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">preview_block_size</span> <span class="o">-</span> <span class="mi">2</span><span class="p">,</span> <span class="n">preview_block_size</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span></div>
+
+
+
+<span class="c1"># ==================== 메인 게임 루프 ====================</span>
+<div class="viewcode-block" id="main">
+<a class="viewcode-back" href="../modules.html#tetris.main">[문서]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;메인 게임 함수 - 게임 초기화 및 메인 루프 실행&quot;&quot;&quot;</span>
+    
+    <span class="c1"># Pygame 화면 설정</span>
+    <span class="n">screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="n">SCREEN_WIDTH</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span><span class="p">))</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_caption</span><span class="p">(</span><span class="s1">&#39;테트리스 2인 대전&#39;</span><span class="p">)</span>
+    <span class="n">clock</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">Clock</span><span class="p">()</span>
+    
+    <span class="c1"># 한글 폰트 설정 시도 (맑은 고딕 -&gt; 나눔고딕 -&gt; Arial 순)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="s1">&#39;malgungothic&#39;</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+        <span class="n">small_font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="s1">&#39;malgungothic&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="s1">&#39;nanumgothic&#39;</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+            <span class="n">small_font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="s1">&#39;nanumgothic&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="s1">&#39;arial&#39;</span><span class="p">,</span> <span class="mi">28</span><span class="p">)</span>
+            <span class="n">small_font</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">font</span><span class="o">.</span><span class="n">SysFont</span><span class="p">(</span><span class="s1">&#39;arial&#39;</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+    
+    <span class="c1"># 두 플레이어의 게임 인스턴스 생성</span>
+    <span class="n">player1</span> <span class="o">=</span> <span class="n">Tetris</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">player2</span> <span class="o">=</span> <span class="n">Tetris</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    
+    <span class="c1"># 게임 보드 위치 설정</span>
+    <span class="n">board_offset_y</span> <span class="o">=</span> <span class="mi">80</span>  <span class="c1"># 상단에서 보드까지의 여백</span>
+    <span class="n">player1_offset_x</span> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># Player 1 보드의 좌측 여백</span>
+    <span class="n">player2_offset_x</span> <span class="o">=</span> <span class="n">SCREEN_WIDTH</span> <span class="o">-</span> <span class="n">GRID_WIDTH</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span> <span class="o">-</span> <span class="mi">30</span>  <span class="c1"># Player 2 보드의 우측 정렬</span>
+    
+    <span class="c1"># 블록 자동 낙하 타이머</span>
+    <span class="n">fall_time_p1</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Player 1 타이머</span>
+    <span class="n">fall_time_p2</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Player 2 타이머</span>
+    <span class="n">fall_speed</span> <span class="o">=</span> <span class="mi">500</span>  <span class="c1"># 낙하 속도 (밀리초)</span>
+    
+    <span class="c1"># 게임 상태 변수</span>
+    <span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>  <span class="c1"># 게임 실행 여부</span>
+    <span class="n">winner</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># 승자 (None, 1, 또는 2)</span>
+    
+    <span class="c1"># ==================== 메인 게임 루프 ====================</span>
+    <span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+        <span class="c1"># 프레임 시간 계산</span>
+        <span class="n">dt</span> <span class="o">=</span> <span class="n">clock</span><span class="o">.</span><span class="n">get_rawtime</span><span class="p">()</span>
+        <span class="n">fall_time_p1</span> <span class="o">+=</span> <span class="n">dt</span>
+        <span class="n">fall_time_p2</span> <span class="o">+=</span> <span class="n">dt</span>
+        <span class="n">clock</span><span class="o">.</span><span class="n">tick</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>  <span class="c1"># 60 FPS</span>
+        
+        <span class="c1"># ==================== 자동 낙하 처리 ====================</span>
+        <span class="c1"># Player 1 자동 낙하</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">player1</span><span class="o">.</span><span class="n">game_over</span> <span class="ow">and</span> <span class="n">fall_time_p1</span> <span class="o">&gt;=</span> <span class="n">fall_speed</span><span class="p">:</span>
+            <span class="n">fall_time_p1</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">cleared</span> <span class="o">=</span> <span class="n">player1</span><span class="o">.</span><span class="n">soft_drop</span><span class="p">()</span>
+            <span class="c1"># 2줄 이상 제거 시 상대방에게 공격 (제거한 라인 수 - 1)</span>
+            <span class="k">if</span> <span class="n">cleared</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">player2</span><span class="o">.</span><span class="n">add_garbage_lines</span><span class="p">(</span><span class="n">cleared</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        
+        <span class="c1"># Player 2 자동 낙하</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">player2</span><span class="o">.</span><span class="n">game_over</span> <span class="ow">and</span> <span class="n">fall_time_p2</span> <span class="o">&gt;=</span> <span class="n">fall_speed</span><span class="p">:</span>
+            <span class="n">fall_time_p2</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">cleared</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">soft_drop</span><span class="p">()</span>
+            <span class="c1"># 2줄 이상 제거 시 상대방에게 공격</span>
+            <span class="k">if</span> <span class="n">cleared</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">player1</span><span class="o">.</span><span class="n">add_garbage_lines</span><span class="p">(</span><span class="n">cleared</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        
+        <span class="c1"># ==================== 승자 결정 ====================</span>
+        <span class="k">if</span> <span class="n">player1</span><span class="o">.</span><span class="n">game_over</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">winner</span><span class="p">:</span>
+            <span class="n">winner</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1"># Player 1이 게임오버면 Player 2 승리</span>
+        <span class="k">elif</span> <span class="n">player2</span><span class="o">.</span><span class="n">game_over</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">winner</span><span class="p">:</span>
+            <span class="n">winner</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Player 2가 게임오버면 Player 1 승리</span>
+        
+        <span class="c1"># ==================== 이벤트 처리 ====================</span>
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">get</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span>
+                <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+            
+            <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">KEYDOWN</span><span class="p">:</span>
+                <span class="c1"># ========== Player 1 조작 (WASD + Left Shift) ==========</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">player1</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_a</span><span class="p">:</span>  <span class="c1"># 왼쪽 이동</span>
+                        <span class="n">player1</span><span class="o">.</span><span class="n">move_piece</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_d</span><span class="p">:</span>  <span class="c1"># 오른쪽 이동</span>
+                        <span class="n">player1</span><span class="o">.</span><span class="n">move_piece</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_s</span><span class="p">:</span>  <span class="c1"># 빠른 낙하</span>
+                        <span class="n">_</span><span class="p">,</span> <span class="n">cleared</span> <span class="o">=</span> <span class="n">player1</span><span class="o">.</span><span class="n">soft_drop</span><span class="p">()</span>
+                        <span class="k">if</span> <span class="n">cleared</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                            <span class="n">player2</span><span class="o">.</span><span class="n">add_garbage_lines</span><span class="p">(</span><span class="n">cleared</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_w</span><span class="p">:</span>  <span class="c1"># 회전</span>
+                        <span class="n">player1</span><span class="o">.</span><span class="n">rotate_piece</span><span class="p">()</span>
+                    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_LSHIFT</span><span class="p">:</span>  <span class="c1"># 즉시 낙하</span>
+                        <span class="n">cleared</span> <span class="o">=</span> <span class="n">player1</span><span class="o">.</span><span class="n">hard_drop</span><span class="p">()</span>
+                        <span class="k">if</span> <span class="n">cleared</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                            <span class="n">player2</span><span class="o">.</span><span class="n">add_garbage_lines</span><span class="p">(</span><span class="n">cleared</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                
+                <span class="c1"># ========== Player 2 조작 (방향키 + Enter) ==========</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">player2</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_LEFT</span><span class="p">:</span>  <span class="c1"># 왼쪽 이동</span>
+                        <span class="n">player2</span><span class="o">.</span><span class="n">move_piece</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_RIGHT</span><span class="p">:</span>  <span class="c1"># 오른쪽 이동</span>
+                        <span class="n">player2</span><span class="o">.</span><span class="n">move_piece</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_DOWN</span><span class="p">:</span>  <span class="c1"># 빠른 낙하</span>
+                        <span class="n">_</span><span class="p">,</span> <span class="n">cleared</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">soft_drop</span><span class="p">()</span>
+                        <span class="k">if</span> <span class="n">cleared</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                            <span class="n">player1</span><span class="o">.</span><span class="n">add_garbage_lines</span><span class="p">(</span><span class="n">cleared</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_UP</span><span class="p">:</span>  <span class="c1"># 회전</span>
+                        <span class="n">player2</span><span class="o">.</span><span class="n">rotate_piece</span><span class="p">()</span>
+                    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_RETURN</span><span class="p">:</span>  <span class="c1"># 즉시 낙하</span>
+                        <span class="n">cleared</span> <span class="o">=</span> <span class="n">player2</span><span class="o">.</span><span class="n">hard_drop</span><span class="p">()</span>
+                        <span class="k">if</span> <span class="n">cleared</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                            <span class="n">player1</span><span class="o">.</span><span class="n">add_garbage_lines</span><span class="p">(</span><span class="n">cleared</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+                
+                <span class="c1"># ========== 게임 종료 및 재시작 ==========</span>
+                <span class="k">if</span> <span class="n">winner</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_r</span><span class="p">:</span>  <span class="c1"># 재시작</span>
+                        <span class="n">player1</span> <span class="o">=</span> <span class="n">Tetris</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+                        <span class="n">player2</span> <span class="o">=</span> <span class="n">Tetris</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+                        <span class="n">winner</span> <span class="o">=</span> <span class="kc">None</span>
+                    <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_q</span> <span class="ow">or</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_ESCAPE</span><span class="p">:</span>  <span class="c1"># 종료</span>
+                        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="k">elif</span> <span class="n">event</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">K_ESCAPE</span><span class="p">:</span>  <span class="c1"># 게임 중 ESC는 종료</span>
+                    <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+        
+        <span class="c1"># ==================== 화면 그리기 ====================</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="n">BLACK</span><span class="p">)</span>  <span class="c1"># 배경을 검은색으로 채우기</span>
+        
+        <span class="c1"># 제목 표시</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;테트리스 대전&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+        <span class="n">title_rect</span> <span class="o">=</span> <span class="n">title</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">title_rect</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">winner</span><span class="p">:</span>  <span class="c1"># 게임이 진행 중일 때</span>
+            <span class="n">draw_player_info</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player1</span><span class="p">,</span> <span class="n">player1_offset_x</span><span class="p">,</span> <span class="n">board_offset_y</span> <span class="o">-</span> <span class="mi">55</span><span class="p">,</span> <span class="n">small_font</span><span class="p">,</span> <span class="s1">&#39;Player 1 (WASD)&#39;</span><span class="p">)</span>
+            <span class="n">draw_board</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player1</span><span class="p">,</span> <span class="n">player1_offset_x</span><span class="p">,</span> <span class="n">board_offset_y</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">player1</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+                <span class="n">draw_piece</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player1</span><span class="o">.</span><span class="n">current_piece</span><span class="p">,</span> <span class="n">player1_offset_x</span><span class="p">,</span> <span class="n">board_offset_y</span><span class="p">)</span>
+            <span class="n">draw_grid</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player1_offset_x</span><span class="p">,</span> <span class="n">board_offset_y</span><span class="p">)</span>
+            
+            <span class="c1"># Player 1 다음 블록 미리보기 (보드 오른쪽)</span>
+            <span class="n">next_box_offset_x</span> <span class="o">=</span> <span class="n">player1_offset_x</span> <span class="o">+</span> <span class="n">GRID_WIDTH</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span> <span class="o">+</span> <span class="mi">30</span>
+            <span class="n">draw_next_piece</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player1</span><span class="p">,</span> <span class="n">next_box_offset_x</span><span class="p">,</span> <span class="n">board_offset_y</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">small_font</span><span class="p">)</span>
+            
+            <span class="n">draw_player_info</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player2</span><span class="p">,</span> <span class="n">player2_offset_x</span><span class="p">,</span> <span class="n">board_offset_y</span> <span class="o">-</span> <span class="mi">55</span><span class="p">,</span> <span class="n">small_font</span><span class="p">,</span> <span class="s1">&#39;Player 2 (방향키)&#39;</span><span class="p">)</span>
+            <span class="n">draw_board</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player2</span><span class="p">,</span> <span class="n">player2_offset_x</span><span class="p">,</span> <span class="n">board_offset_y</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">player2</span><span class="o">.</span><span class="n">game_over</span><span class="p">:</span>
+                <span class="n">draw_piece</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player2</span><span class="o">.</span><span class="n">current_piece</span><span class="p">,</span> <span class="n">player2_offset_x</span><span class="p">,</span> <span class="n">board_offset_y</span><span class="p">)</span>
+            <span class="n">draw_grid</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player2_offset_x</span><span class="p">,</span> <span class="n">board_offset_y</span><span class="p">)</span>
+            
+            <span class="c1"># Player 2 다음 블록 미리보기 (보드 왼쪽)</span>
+            <span class="n">next_box_offset_x2</span> <span class="o">=</span> <span class="n">player2_offset_x</span> <span class="o">-</span> <span class="mi">140</span>
+            <span class="n">draw_next_piece</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">player2</span><span class="p">,</span> <span class="n">next_box_offset_x2</span><span class="p">,</span> <span class="n">board_offset_y</span> <span class="o">+</span> <span class="mi">50</span><span class="p">,</span> <span class="n">small_font</span><span class="p">)</span>
+            
+            <span class="c1"># ========== 중앙 VS 표시 ==========</span>
+            <span class="n">vs_text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;VS&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
+            <span class="n">vs_rect</span> <span class="o">=</span> <span class="n">vs_text</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">//</span> <span class="mi">2</span><span class="p">))</span>
+            <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">vs_text</span><span class="p">,</span> <span class="n">vs_rect</span><span class="p">)</span>
+            
+            <span class="c1"># ========== 하단 조작 안내 ==========</span>
+            <span class="n">help_y</span> <span class="o">=</span> <span class="n">board_offset_y</span> <span class="o">+</span> <span class="n">GRID_HEIGHT</span> <span class="o">*</span> <span class="n">BLOCK_SIZE</span> <span class="o">+</span> <span class="mi">30</span>
+            <span class="n">help1</span> <span class="o">=</span> <span class="n">small_font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;P1: W(회전) A(←) S(↓) D(→) LShift(즉시낙하)&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">CYAN</span><span class="p">)</span>
+            <span class="n">help2</span> <span class="o">=</span> <span class="n">small_font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;P2: ↑(회전) ←(좌) ↓(하) →(우) Enter(즉시낙하)&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">ORANGE</span><span class="p">)</span>
+            <span class="n">help1_rect</span> <span class="o">=</span> <span class="n">help1</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">help_y</span><span class="p">))</span>
+            <span class="n">help2_rect</span> <span class="o">=</span> <span class="n">help2</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">help_y</span> <span class="o">+</span> <span class="mi">30</span><span class="p">))</span>
+            <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">help1</span><span class="p">,</span> <span class="n">help1_rect</span><span class="p">)</span>
+            <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">help2</span><span class="p">,</span> <span class="n">help2_rect</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>  <span class="c1"># 게임 종료 시 승리 화면</span>
+            <span class="c1"># ========== 승리 메시지 ==========</span>
+            <span class="n">winner_text</span> <span class="o">=</span> <span class="n">font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Player </span><span class="si">{</span><span class="n">winner</span><span class="si">}</span><span class="s1"> 승리!&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">YELLOW</span><span class="p">)</span>
+            <span class="n">winner_rect</span> <span class="o">=</span> <span class="n">winner_text</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">60</span><span class="p">))</span>
+            <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">winner_text</span><span class="p">,</span> <span class="n">winner_rect</span><span class="p">)</span>
+            
+            <span class="c1"># ========== 최종 점수 표시 ==========</span>
+            <span class="n">p1_score</span> <span class="o">=</span> <span class="n">small_font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Player 1 점수: </span><span class="si">{</span><span class="n">player1</span><span class="o">.</span><span class="n">score</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+            <span class="n">p1_score_rect</span> <span class="o">=</span> <span class="n">p1_score</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span><span class="p">))</span>
+            <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">p1_score</span><span class="p">,</span> <span class="n">p1_score_rect</span><span class="p">)</span>
+            
+            <span class="n">p2_score</span> <span class="o">=</span> <span class="n">small_font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Player 2 점수: </span><span class="si">{</span><span class="n">player2</span><span class="o">.</span><span class="n">score</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">)</span>
+            <span class="n">p2_score_rect</span> <span class="o">=</span> <span class="n">p2_score</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">20</span><span class="p">))</span>
+            <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">p2_score</span><span class="p">,</span> <span class="n">p2_score_rect</span><span class="p">)</span>
+            
+            <span class="c1"># ========== 구분선 ==========</span>
+            <span class="n">pygame</span><span class="o">.</span><span class="n">draw</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">screen</span><span class="p">,</span> <span class="n">WHITE</span><span class="p">,</span> 
+                           <span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">150</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">60</span><span class="p">),</span>
+                           <span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">150</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">60</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+            
+            <span class="c1"># ========== 재시작/종료 안내 ==========</span>
+            <span class="n">restart_text</span> <span class="o">=</span> <span class="n">small_font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;R - 다시 시작&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">GREEN</span><span class="p">)</span>
+            <span class="n">restart_rect</span> <span class="o">=</span> <span class="n">restart_text</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">90</span><span class="p">))</span>
+            <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">restart_text</span><span class="p">,</span> <span class="n">restart_rect</span><span class="p">)</span>
+            
+            <span class="n">quit_text</span> <span class="o">=</span> <span class="n">small_font</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="s1">&#39;Q - 게임 종료&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">RED</span><span class="p">)</span>
+            <span class="n">quit_rect</span> <span class="o">=</span> <span class="n">quit_text</span><span class="o">.</span><span class="n">get_rect</span><span class="p">(</span><span class="n">center</span><span class="o">=</span><span class="p">(</span><span class="n">SCREEN_WIDTH</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="n">SCREEN_HEIGHT</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">120</span><span class="p">))</span>
+            <span class="n">screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">quit_text</span><span class="p">,</span> <span class="n">quit_rect</span><span class="p">)</span>
+        
+        <span class="c1"># 화면 업데이트</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+    
+    <span class="c1"># 게임 종료</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span></div>
+
+
+
+<span class="c1"># ==================== 프로그램 시작점 ====================</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>  <span class="c1"># 메인 함수 실행</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
